@@ -1,4 +1,6 @@
 # python_code
+
+
 def main():
     x=0
     y=0
