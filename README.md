@@ -7,7 +7,6 @@ def main():
     d=[[0 for i in range(3)] for j in range(3)]
     
 
-
     while(x<3):
         while(y<3):
             try:
