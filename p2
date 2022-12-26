@@ -1,0 +1,54 @@
+
+from tkinter import*
+import time
+
+class myGUI:
+    def __init__(self):
+        self.x=0
+        self.y=0
+        
+        self.root=Tk()
+        self.root.geometry("100x100+%d+%d" %(self.x,self.y))
+        self.root.overrideredirect(True)
+        self.root.config(bg="Red")
+
+        self.root.after(100,self.fx)
+        
+    def fx(self):       
+        if(self.x==0):
+            self.root.geometry("100x100+%d+%d" %(self.x,self.y))
+            self.root.config(bg="Red")
+            print(self.x,self.y)
+            self.y+=20
+
+        if(self.y==740):
+            self.root.geometry("100x100+%d+%d" %(self.x,self.y))
+            self.root.config(bg="Green") 
+            print(self.x,self.y)
+            self.x+=20
+ 
+        if(self.x==1440):
+            self.root.geometry("100x100+%d+%d" %(self.x,self.y))
+            self.root.config(bg="Blue") 
+            print(self.x,self.y)
+            self.y-=20
+            
+        
+
+        if(self.y==0):
+            self.root.geometry("100x100+%d+%d" %(self.x,self.y))
+            self.root.config(bg="Yellow") 
+            print(self.x,self.y)
+            self.x-=20
+        
+        self.root.after(100,self.fx)
+                
+
+        
+
+        
+def main():
+    s=myGUI()
+
+
+if __name__ == "__main__":main()
